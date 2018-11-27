@@ -84,16 +84,16 @@ public class LibRepoTest {
     }
 	
 	@Test
-	public void testFindSubkectByDuration() {
+	public void testFindSubjectByDuration() {
 		
 		Subject sub = new Subject();
 		sub.setSubjectId(33);
 		sub.setSubjectTitle("TestSubject");
-		sub.setDuration(420);
+		sub.setDuration(10);
 		subRepo.save(sub);
 		
-		List<Subject> subList = subRepo.find(420);
-		assertEquals(420, subList.get(0).getDuration());
+		List<Subject> subList = subRepo.find(10);
+		assertEquals(10, subList.get(0).getDuration());
 	}
 	
 	@Test
